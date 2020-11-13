@@ -25,7 +25,8 @@ $rows=$pdo->query($sql)->fetchALL();
             <a href="?do=edit_invoice&id=<?=$row['id'];?>">
                 <button class="btn btn-info">編輯</button>
             </a>
-            <button class="btn btn-danger">刪除</button>
+    
+                <button class="btn btn-danger">刪除</button>
         </td>
     </tr>
     <?php
