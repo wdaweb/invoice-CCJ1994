@@ -1,5 +1,5 @@
 
- 
+      <form action="./api/add_invoice.php" method="post">
         <div>
           日期:<input type="date" name="date" id="" >
         </div>
@@ -25,3 +25,4 @@
           <input type="submit" value="送出">
         </div>
         </div>
+      </form>
