@@ -33,7 +33,7 @@
             <a href="award.php">對獎</a>
             </div>
             <div class="text-center">
-            <a href="add_award_number.php">輸入獎號</a>
+            <a href="?do=add_awards">輸入獎號</a>
             </div>
             <div class="text-center">
             <a href="index.php">回首頁</a>
