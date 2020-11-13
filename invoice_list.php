@@ -16,16 +16,15 @@ $rows=$pdo->query($sql)->fetchALL();
     </tr>
     <?php
         foreach($rows as $row){
-
-        
-
     ?>
     <tr>
         <td><?=$row['code'].$row['number'];?></td>
         <td><?=$row['date'];?></td>
         <td><?=$row['payment'];?></td>
         <td>
-            <button class="btn btn-primary">編輯</button>
+            <a href="?do=edit_invoice&id=<?=$row['id'];?>">
+                <button class="btn btn-info">編輯</button>
+            </a>
             <button class="btn btn-danger">刪除</button>
         </td>
     </tr>
