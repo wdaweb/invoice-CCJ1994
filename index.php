@@ -11,7 +11,7 @@
     <h3 class="text-center">統一發票紀錄與兌獎</h3>
 
     <div class="container">
-        <div class="col-6 d-flex justify-content-between p-3 mx-auto border">
+        <div class="col-lg-8 col-md-12 d-flex justify-content-between p-3 mx-auto border">
             <?php
             $month=[
                 1=>"1,2月",
@@ -30,16 +30,16 @@
             
             </div>
             <div class="text-center">
-            <a href="?do=award.php">對獎</a>
+            <a href="award.php">對獎</a>
             </div>
             <div class="text-center">
-            <a href="?do=add_award_number.php">輸入獎號</a>
+            <a href="add_award_number.php">輸入獎號</a>
             </div>
             <div class="text-center">
             <a href="index.php">回首頁</a>
             </div>
         </div>
-        <div class="col-6 d-flex p-3 mx-auto border">
+        <div class="col-lg-8 col-md-12 d-flex p-3 mx-auto border">
             
                 <?php
         if(isset($_GET['do'])){
