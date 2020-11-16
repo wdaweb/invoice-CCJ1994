@@ -6,7 +6,7 @@
         <td headers="months" class="title">
           <input type="number" name="year" min="<?=date("Y")-1;?>" max="<?=date("Y")+1;?>" step="1"
             value="<?=date("Y");?>">年
-          <select name="preiod" id="">
+          <select name="period">
             <option value="1">01 ~ 02</option>
             <option value="2">03 ~ 04</option>
             <option value="3">05 ~ 06</option>
