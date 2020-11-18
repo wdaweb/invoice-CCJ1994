@@ -43,7 +43,7 @@
                 <a href="index.php">回首頁</a>
             </div>        
         </div>
-            <div class="col-lg-8 col-md-12  d-flex p-3 mx-auto border">
+            <div class="col-lg-8 col-md-12  d-flex row p-3 mx-auto border">
                 <?php 
                 
                 if(isset($_GET['do'])){

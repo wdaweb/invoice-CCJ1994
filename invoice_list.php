@@ -6,7 +6,14 @@ $sql="select * from `invoices` order by date desc ";
 $rows=$pdo->query($sql)->fetchALL();
 
 ?>
-
+<div class="row" style="list-style-type:none;">
+  <li class="px-4"><a href="">1-2月</a></li>
+  <li class="px-4"><a href="">3-4月</a></li>
+  <li class="px-4"><a href="">5-6月</a></li>
+  <li class="px-4"><a href="">7-8月</a></li>
+  <li class="px-4"><a href="">9-10月</a></li>
+  <li class="px-4"><a href="">11-12月</a></li>
+</div>
 <table class="table text-center">
 <thead>
     <tr>
@@ -30,6 +37,9 @@ foreach($rows as $row){
             </a>
             <a href="?do=del_invoice&id=<?=$row['id'];?>">
                 <button class="btn btn-danger">刪除</button>
+            </a>
+            <a href="?do=award&id=<?=$row['id'];?>">
+                <button class="btn btn-success">對獎</button>
             </a>
         </td>
     </tr>
