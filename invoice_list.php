@@ -1,19 +1,23 @@
 
 <?php
 include_once "base.php";
+if(isset($_GET['period'])){
+    $period=$_GET['period'];
+}else{
+    $period=ceil(date("m")/2);
+}
 
-$period=ceil(date("m")/2);
 $sql="select * from `invoices` where period='$period' order by date desc ";
 $rows=$pdo->query($sql)->fetchALL();
 
 ?>
 <div class="row" style="list-style-type:none;">
-  <li class="px-4"><a href="">1-2月</a></li>
-  <li class="px-4"><a href="">3-4月</a></li>
-  <li class="px-4"><a href="">5-6月</a></li>
-  <li class="px-4"><a href="">7-8月</a></li>
-  <li class="px-4"><a href="">9-10月</a></li>
-  <li class="px-4"><a href="">11-12月</a></li>
+    <li class="px-4"><a href="?do=invoice_list&period=1">1-2月</a></li>
+    <li class="px-4"><a href="?do=invoice_list&period=2">3-4月</a></li>
+    <li class="px-4"><a href="?do=invoice_list&period=3">5-6月</a></li>
+    <li class="px-4"><a href="?do=invoice_list&period=4">7-8月</a></li>
+    <li class="px-4"><a href="?do=invoice_list&period=5">9-10月</a></li>
+    <li class="px-4"><a href="?do=invoice_list&period=6">11-12月</a></li>
 </div>
 <table class="table text-center">
 <thead>
