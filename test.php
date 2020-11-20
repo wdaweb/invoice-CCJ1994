@@ -1,42 +1,6 @@
 <?php
 include_once "base.php";
 
-// function find2($table,$def){
-//   global $pdo;
-//   $sql="select * from $table where $def";
-//   $row=$pdo->query($sql)->fetch();
-
-//   return $row;
-// }
-
-echo implode(" && ",['欄位1'=>'值1','欄位2'=>'值2','id'=>'9']);
-echo "<br>";
-echo "欄位1=>'值1' && 欄位2='值2' && id='9'";
-echo "<br>";
-$array=['欄位1'=>'值1','欄位2'=>'值2','id'=>'9'];
-//利用一個暫時的陣列來存放語句的片段
-foreach($array as $key => $value){
-  $tmp[]=sprintf("`%s`='%s'",$key,$value);
-  // $tmp[]="`".$key."`='".$value."'";
-}
-print_r($tmp);
-echo "<br>";
-echo implode(" && ",$tmp);
-
-echo "<hr>";
-// function find($table,$id){
-//   global $pdo;
-
-//   if(is_numeric($id)){
-
-//     $sql="select * from $table where id='$id'";
-//   }else{
-//     $sql="select * from $table where $id";
-//   }
-//   $row=$pdo->query($sql)->fetch();
-
-//   return $row;
-// }
 
 //取得單一資料的自訂函式
 function find($table,$id){
@@ -56,11 +20,65 @@ function find($table,$id){
   return $row;
 }
 
-$row=find('invoices',11);
-echo $row['code'].$row['number']."<br>";
+function all($table,...$arg){
+  global $pdo;
+  
+  // echo gettype($arg);
 
-$row=find('invoices',['code'=>'FF','number'=>'74339983']);
-echo $row['code'].$row['number']."<br>";
+  $sql="select * from $table";
+if(isset($arg[0])){
+  if(is_array($arg[0])){
+    //製作會在where後面的句子字串(陣列格式)
+    
+    foreach($arg[0] as $key => $value){
+      $tmp[]=sprintf("`%s`='%s'",$key,$value);
+      // $tmp[]="`".$key."`='".$value."'";
+    }
+    $sql=$sql." where ".implode(" && ",$tmp);
+
+    
+  }else{
+
+    //製作非陣列的語句接在$sql後面
+      $sql=$sql.$arg[0];  
+  }
+}
+  if(isset($arg[1])){
+    //製作接在最後面的句子字串
+    $sql=$sql.$arg[1];
+  
+  }
+  echo $sql."<br>";
+  return $pdo->query($sql)->fetchAll();
+}
+
+// print_r(all('invoices'));
+// echo "<hr>";
+// print_r(all('invoices',['code'=>"GD",'period'=>6]));
+// echo "<hr>";
+// print_r(all('invoices',['code'=>"FF",'period'=>1])," order by date desc");
+// echo "<hr>";
+// print_r(all('invoices'," limit 5"));
+
+function del($table,$id){
+  global $pdo;
+  $sql="delete from $table where ";
+  if(is_array($id)){
+    foreach($id as $key => $value){
+      $tmp[]=sprintf("`%s`='%s'",$key,$value);
+      // $tmp[]="`".$key."`='".$value."'";
+    }
+    $sql=$sql.implode(' && ',$tmp);
+  }else{
+    $sql=$sql . " id='$id' ";
+  }
+  $row=$pdo->exec($sql);
+  return $row;
+}
+
+$def=['code'=>'FF'];
+echo del('invoices',$def);
+
 
 
 
