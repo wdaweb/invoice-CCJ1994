@@ -38,6 +38,7 @@ echo "<hr>";
 //   return $row;
 // }
 
+//取得單一資料的自訂函式
 function find($table,$id){
   global $pdo;
   $sql="select * from $table where ";
