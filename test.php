@@ -4,21 +4,22 @@ include_once "base.php";
 
 //取得單一資料的自訂函式
 function find($table,$id){
-  global $pdo;
-  $sql="select * from $table where ";
-  if(is_array($id)){
-    foreach($id as $key => $value){
-      $tmp[]=sprintf("`%s`='%s'",$key,$value);
-      // $tmp[]="`".$key."`='".$value."'";
+    global $pdo;
+    $sql="select * from $table where ";
+    if(is_array($id)){
+        foreach($id as $key => $value){
+            $tmp[]=sprintf("`%s`='%s'",$key,$value);
+            //$tmp[]="`".$key."`='".$value."'";
+        }
+        $sql=$sql.implode(' && ',$tmp);
+    }else{
+        $sql=$sql . " id='$id' ";
     }
-    $sql=$sql.implode(" && ",$tmp);
-  }else{
-    $sql=$sql." id='$id' ";
-  }
-  $row=$pdo->query($sql)->fetch();
+    $row=$pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
 
-  return $row;
+    return $row;
 }
+
 
 function all($table,...$arg){
   global $pdo;
@@ -76,11 +77,49 @@ function del($table,$id){
   return $row;
 }
 
-$def=['code'=>'FF'];
-echo del('invoices',$def);
+// $def=['code'=>'FF'];
+// echo del('invoices',$def);
 
+$row=find('invoices',22);
+echo"<pre>";
+print_r($row);
+echo"</pre>";
+// update invoices set `code`='AA',`payment`='1' where `id`='22';
+$row['code']='AA';
+$row['payment']=1;
+update('invoices',$row);
 
+function update($table,$array){
+  global $pdo;
+  $sql="update $table set";
+  foreach($array as $key => $value){
+    if($key!='id'){
+      $tmp[]=sprintf("`%s`='%s'",$key,$value);
+      // $tmp[]="`".$key."`='".$value."'";
+    }
+  }
+  $sql=$sql.implode(",",$tmp)." where `id`='{$array['id']}'";
+  echo $sql;
+  $pdo->exec($sql);
+  
+}
 
+function insert($table,$array){
+  global $pdo;
+  $sql="insert into $table(`" .implode("`,`",arry_keys($array)). "`) values('".impolde("','").$array."')";
+
+  $pdo->exec($sql);
+}
+
+function save($table,$array){
+  if(isset($array['id'])){
+    //update
+    update($table,$array);
+  }else{
+    //insert
+    insert($table,$array);
+  }
+}
 
 
 ?>
