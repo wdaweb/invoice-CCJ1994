@@ -1,5 +1,5 @@
 <?php
-$dsn="mysql:host=localhost;dbname=invoice;charset=utf8";
+$dsn="mysql:host=localhost;dbname=member;charset=utf8";
 $pdo=new PDO($dsn,'root','');
 
 date_default_timezone_set("Asia/Taipei");
@@ -90,7 +90,7 @@ function update($table,$array){
 
 function insert($table,$array){
   global $pdo;
-  $sql="insert into $table(`" .implode("`,`",arry_keys($array)). "`) values('".impolde("','").$array."')";
+  $sql="insert into $table(`" . implode("`,`",array_keys($array)) . "`) values('".impolde("','",$array)."')";
 
   $pdo->exec($sql);
 }
