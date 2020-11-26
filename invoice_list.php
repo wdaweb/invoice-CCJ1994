@@ -1,14 +1,17 @@
 
 <?php
 include_once "base.php";
+
 if(isset($_GET['period'])){
     $period=$_GET['period'];
 }else{
     $period=ceil(date("m")/2);
 }
 
-$sql="select * from `invoices` where period='$period' order by date desc ";
+// $sql="select * from `invoices` where period='$period' order by date desc ";
 $rows=$pdo->query($sql)->fetchALL();
+
+$row=all('invoices',['period'=>$period],' order by date desc ');
 
 ?>
 <div class="row" style="list-style-type:none;">

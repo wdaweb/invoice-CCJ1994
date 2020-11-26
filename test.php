@@ -49,7 +49,7 @@ if(isset($arg[0])){
     $sql=$sql.$arg[1];
   
   }
-  echo $sql."<br>";
+  // echo $sql."<br>";
   return $pdo->query($sql)->fetchAll();
 }
 
