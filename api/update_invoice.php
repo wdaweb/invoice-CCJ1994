@@ -20,6 +20,7 @@ save('invoices',$row);
 
 // $pdo->exec($sql);
 
-header("location:../index.php?do=invoice_list");
+// header("location:../index.php?do=invoice_list");
+to("../index.php?do=invoice_list");
 
 ?>

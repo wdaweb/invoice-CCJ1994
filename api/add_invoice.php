@@ -15,6 +15,7 @@ echo "</pre>";
 save('invoices',$_POST);
 
 echo "新增完成";
-header("location:../index.php?do=invoice_list");
+// header("location:../index.php?do=invoice_list");
+to("../index.php?do=invoice_list");
 
 ?>
