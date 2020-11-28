@@ -9,9 +9,9 @@ if(isset($_GET['period'])){
 }
 
 // $sql="select * from `invoices` where period='$period' order by date desc ";
-$rows=$pdo->query($sql)->fetchALL();
+// $rows=$pdo->query($sql)->fetchALL();
 
-$row=all('invoices',['period'=>$period],' order by date desc ');
+$rows=all('invoices',['period'=>$period],' order by date desc ');
 
 ?>
 <div class="row" style="list-style-type:none;">
@@ -31,10 +31,11 @@ $row=all('invoices',['period'=>$period],' order by date desc ');
     <th>操作</th>
     </tr>
 </thead>
+<tbody>
+
 <?php
 foreach($rows as $row){
 ?>
-<tbody>
     <tr>
         <td><?=$row['code'].$row['number'];?></td>
         <td><?=$row['date'];?></td>
@@ -51,9 +52,9 @@ foreach($rows as $row){
             </a>
         </td>
     </tr>
-</tbody>
-
 <?php
 }
 ?>
+</tbody>
+
 </table>

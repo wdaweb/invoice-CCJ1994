@@ -1,12 +1,48 @@
 <?php
-$dsn="mysql:host=localhost;dbname=member;charset=utf8";
+
+// 連線資料庫
+$dsn="mysql:host=localhost;dbname=invoice;charset=utf8";
 $pdo=new PDO($dsn,'root','');
 
+// 時區設定
 date_default_timezone_set("Asia/Taipei");
+
+// 使用session
 session_start();
 
 
 $awardStr=['頭','二','三','四','五','六'];
+
+// 驗證函式
+function accept($field,$meg='此欄位不得為空'){
+  if(empty($_POST[$field])){
+      $_SESSION['err'][$field]['empty']=$meg;
+  }
+}
+
+
+function length($field,$min,$max,$meg="長度不足"){
+  if(strlen($_POST[$field])>$max || strlen($_POST[$field]) < $min){
+      $_SESSION['err'][$field]['len']=$meg;
+  }
+
+}
+
+function errFeedBack($field){
+  if(!empty($_SESSION['err'][$field])){
+
+      foreach($_SESSION['err'][$field] as $err){
+          echo "<div style='font-size:12px;color:red'>";
+          echo $err;
+          echo "</div>";
+      }
+  }
+}
+
+
+
+
+// C R U D 函式
 
 function find($table,$id){
   global $pdo;
@@ -114,4 +150,5 @@ function q($sql){
   global $pdo;
   return $pdo->query($sql)->fetchAll();
 }
+
 ?>
