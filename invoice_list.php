@@ -14,27 +14,6 @@ if(isset($_GET['period'])){
 $rows=all('invoices',['period'=>$period],' order by date desc ');
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/liststyling.css">
-</head>
-
-<body>
-  <div class="container1">
-    <section class="leftPart">
-      <div class="user_area">
-
-      </div>
-    </section>
-    <section class="middlePart">
-      <div class="list_area">
         <div class="monthBar">
           <li><a href="?invoice_list&period=1"><div class="monthH">1-2月</div></a></li>
           <li><a href="?invoice_list&period=2"><div class="monthH">3-4月</div></a></li>
@@ -78,14 +57,5 @@ foreach($rows as $row){
 ?>
           </tbody>
         </table>
-      </div>
-    </section>
-    <section class="rightPart">
-      <?php
-        include "main.php";
-      ?>
-    </section>
 
-</body>
-
-</html>
+    

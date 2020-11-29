@@ -1,9 +1,9 @@
 <div class="enter_area">
         <div class="btnPart">
           <a href="index.php"><div class="btn1"></div></a>
-          <a href="invoice_list.php"><div class="btn2"></div></a>
-          <a href="?do=add_awards1"><div class="btn3"></div></a>
-          <a href="award_numbers.php"><div class="btn4"></div></a>
+          <a href="?do=invoice_list"><div class="btn2"></div></a>
+          <a href="?do=add_awards"><div class="btn3"></div></a>
+          <a href="?do=award_numbers"><div class="btn4"></div></a>
         </div>
         <div class="enterPart">
           <form action="api/add_invoice.php" method="post">

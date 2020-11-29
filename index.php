@@ -31,7 +31,6 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
     <section class="leftPart">
       <div class="user_area">
 
-        user
       </div>
     </section>
     <section class="middlePart">
@@ -40,6 +39,8 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
         if(isset($_GET['do'])){
           $file=$_GET['do'].".php";
           include $file;
+        }else{
+          include ("invoice_list.php");
         }
 
         ?>
