@@ -44,7 +44,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
           <li><a href="?invoice_list&period=5">9-10月</a></li>
           <li><a href="?invoice_list&period=6">11-12月</a></li>
         </div>
-        <table>
+        <table class="listT">
           <thead>
             <tr>
               <th>日期</th>
@@ -54,15 +54,13 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
               <th>修改</th>
             </tr>
           </thead>
-          
           <tbody>
 <?php
 foreach($rows as $row){
 ?>
     <tr>
-  <div class="tlist">
-        <td><?=$row['code'].$row['number'];?></td>
         <td><?=$row['date'];?></td>
+        <td><?=$row['code'].$row['number'];?></td>
         <td><?=$row['payment'];?></td>
         <td>
             <a href="?do=edit_invoice&id=<?=$row['id'];?>">
@@ -75,13 +73,11 @@ foreach($rows as $row){
                 <button class="btn btn-success">對獎</button>
             </a>
         </td>
-      </div>
     </tr>
 <?php
 }
 ?>
           </tbody>
-          
         </table>
       </div>
     </section>

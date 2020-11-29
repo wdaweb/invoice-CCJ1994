@@ -59,13 +59,34 @@ body{
 a{
   text-decoration: none;
 }
-.list_area>table{
+.listT{
   margin: auto;
-  width: 400px;
+  width: 100%;
   font-size: 14px;
-
+  text-align: center;
+  height: 100%;
 }
-
+.listT>thead{
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+  font-size: 15px;
+  border: solid 1px;
+  margin: auto;
+}
+th{
+  padding:5px 30px ;
+}
+.listT>tbody {
+  
+  height: 480px;
+  display: inline-block;
+  width: 100%;
+  overflow: auto;
+}
+td{
+  padding: 10px;
+}
 
 
 
