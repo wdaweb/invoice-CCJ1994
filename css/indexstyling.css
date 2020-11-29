@@ -1,65 +1,123 @@
 *{
   font-family: 'Noto Serif TC', serif;
   box-sizing: border-box;
+  color: #34495e;
+}
+body{
+  background: #ecf0f3;
 }
 .container1{
-  width: 535px;
-  height: 570px;
-  background-color: #ecf0f3;
-  margin:20px auto;
-  border-radius: 10px;
-  box-shadow: -3px -3px 7px #ffffff73, 
-              3px 3px 5px rgba(94,104,121,0.288),
-              inset -3px -3px 7px #ffffff73,
-            inset 3px 3px 5px rgba(94,104,121,0.288);
+  margin:auto;
   display: flex;
-  
+  width: 1000px;
+  height: 100vh;
+
 }
+/* 3大區塊 */
 .leftPart{
+  width: 250px;
+}
+.middlePart{
   width: 450px;
-  padding: 25px 0 0 25px;
+}
+.rightPart{
+  width: 300px;
 }
 
-.rightPart{
-  width: 60px;
+/* left */
+.user_area{
+  margin: 20px;
+  height: 600px;
   border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73, 
+              3px 3px 5px rgba(94,104,121,0.288);
+      
+}
+
+/* middle */
+  .list_area{
+    margin: 20px;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #ffffff73, 
+                3px 3px 5px rgba(94,104,121,0.288);
+        
+  }
+.monthBar{
   display: flex;
-  flex-flow: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 25px;
+  list-style: none;
+  justify-content: space-around;
+  margin: 10px;
+  padding-top: 10px;
+}
+.monthBar>li{
+  transition: 0.1s ease;
+}
+.monthBar>li:hover{
+  border-bottom: 2px solid #95a5a6;
+}
+a{
+  text-decoration: none;
+}
+.list_area>table{
+  margin: auto;
+  width: 400px;
+  font-size: 14px;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* right */
+.enter_area{
+  margin: 20px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73, 
+              3px 3px 5px rgba(94,104,121,0.288);   
+}
+
+.btnPart{
+  margin: 10px;
+  height: 80px;
+  display: flex;
+  padding-top: 10px;
 }
 .btn1{
-  margin: 15px;
-  width: 60px;
-  height:60px;
+  margin: 5px;
+  width: 50px;
+  height:50px;
   background-color:#ecf0f3;
   border:0px;
   box-shadow: -3px -3px 7px #ffffff73, 
               3px 3px 5px rgba(94,104,121,0.288);
   border-radius: 10px;
   outline:none !important;
-  background:url("../img/icon1-01.svg") no-repeat 18px;
-  
+  background:url("../img/icon1-01.svg") no-repeat 11px;
 }
-
 .btn1:active{
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .btn2{
-  margin: 15px;
-  width: 60px;
-  height:60px;
-
+  margin: 5px;
+  width: 50px;
+  height:50px;
   background-color:#ecf0f3;
   border:0px;
   box-shadow: -3px -3px 7px #ffffff73, 
               3px 3px 5px rgba(94,104,121,0.288);
   border-radius: 10px;
   outline:none !important;
-  background:url("../img/icon2-01.svg") no-repeat 16px;
+  background:url("../img/icon2-01.svg") no-repeat 14px;
 }
 .btn2:active{
   color:black;
@@ -67,9 +125,9 @@
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .btn3{
-  margin: 15px;
-  width: 60px;
-  height:60px;
+  margin: 5px;
+  width: 50px;
+  height:50px;
 
   background-color:#ecf0f3;
   box-shadow: -3px -3px 7px #ffffff73, 
@@ -77,7 +135,7 @@
   border:0px;
   border-radius: 10px;
   outline:none !important ;
-  background:url("../img/icon3-01.svg") no-repeat 16px;
+  background:url("../img/icon3-01.svg") no-repeat 11px;
 }
 
 .btn3:active{
@@ -85,16 +143,15 @@
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .btn4{
-  margin: 15px;
-  width: 60px;
-  height:60px;
-
+  margin: 5px;
+  width: 50px;
+  height:50px;
   background-color:#ecf0f3;
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
   border:0px;
   border-radius: 10px;
   outline:none !important ;
-  background:url("../img/icon4-01.svg") no-repeat 10px;
+  background:url("../img/icon4-01.svg") no-repeat 5px;
 }
 
 .btn4:active{
@@ -103,37 +160,17 @@
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 
-.date{
-  display: flex;
-  font-size: 18px;
-  position: relative;
+
+.enterPart{
+  margin: 15px;
+  font-size: 20px;
 }
-/* .date1{
-  position: absolute;
-  left: 25px;
-} */
-.date2{
-  position: absolute;
-  left: 200px;
-}
-.dateP{
-  padding-left:20px;
-  font-size: 10px;
-  width: 80px;
-  height: 35px;
-  margin-left: 25px;
-  position: absolute;
-  border: 0;
-  border-radius: 5px;
-  box-shadow:inset -3px -3px 7px #ffffff73,
-            inset 3px 3px 5px rgba(94,104,121,0.288);
-  outline:none;
-}
+
 .dateD{
   padding-left:10px;
   font-size: 10px;
-  width: 110px;
-  height: 35px;
+  width: 165px;
+  height: 30px;
   margin-left: 25px;
   position: absolute;
   border: 0;
@@ -144,13 +181,14 @@
 }
 .num{
   position: relative;
-  top:40px;
-  font-size: 18px;
+  top:30px;
 }
 .num1{
-  width: 80px;
-  height: 35px;
-  margin-left: 25px;
+  padding-left:10px;
+  width: 50px;
+  height: 30px;
+  top:40px;
+  left: 0px;
   position: absolute;
   border: 0;
   border-radius: 5px;
@@ -159,10 +197,12 @@
   outline:none;
 }
 .num2{
-  width: 195px;
-  height: 35px;
+  padding-left:10px;
+  width: 165px;
+  height: 30px;
+  top: 40px;
   position: absolute;
-  left: 200px;
+  left: 65px;
   border: 0;
   border-radius: 5px;
   box-shadow:inset -3px -3px 7px #ffffff73,
@@ -171,12 +211,12 @@
 }
 .pay{
   position: relative;
-  top: 80px;
-  font-size: 18px;
+  top: 105px;
 }
 .pay1{
-  width: 300px;
-  height: 35px;
+  padding-left:10px;
+  width: 165px;
+  height: 30px;
   margin-left: 25px;
   position: absolute;
   border: 0;
@@ -188,12 +228,12 @@
 
 .item{
   position: relative;
-  top:120px;
-  font-size: 18px;
+  top:140px;
 }
 .item1{
-  width: 300px;
-  height: 35px;
+  padding-left:10px;
+  width: 165px;
+  height: 30px;
   margin-left: 25px;
   position: absolute;
   border: 0;
@@ -204,11 +244,12 @@
 }
 .note{
   position: relative;
-  top: 160px;
-  font-size: 18px;
+  top: 180px;
 }
 .note1{
-  width: 300px;
+  padding:10px;
+  padding-top:-100px;
+  width: 165px;
   height: 150px;
   margin-left: 25px;
   position: absolute;
@@ -217,19 +258,18 @@
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
   outline:none;
+  resize : none;
 }
-
 .hvr:hover{
   box-shadow: -3px -3px 7px #ffffff73, 
               3px 3px 5px rgba(94,104,121,0.288),
               inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
-
 }
 .btnSave{
-  transform: translate(200px,320px);
-  width: 80px;
-  height: 50px;
+  transform: translate(80px,310px);
+  width: 70px;
+  height: 40px;
   border: 0;
   font-size: 20px;
   background-color:#ecf0f3;
@@ -241,22 +281,3 @@
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }
-
-
-/* invoice_list.php */
-
-.monthBar{
-  display: flex;
-  list-style-type: none;
-  padding: 20px 20px 10px;
-  justify-content: space-between;
-}
-.monthTag{
-  color:#4D4D4D;
-  text-decoration: none;
-}
-.tableTitle th{
-  font-size: 20px;
-  padding: 0px 0px 0px 40px;
-}
-

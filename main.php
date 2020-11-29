@@ -1,26 +1,36 @@
-<form action="api/add_invoice.php" method="post">
-                    <div>日期：<input type="date" name="date">
-                    <?php errFeedBack('date');?>
-                  <!-- </div>
-                  期別：<select name="period">
-                      <option value="1">1,2月</option>
-                      <option value="2">3,4月</option>
-                      <option value="3">5,6月</option>
-                      <option value="4">7,8月</option>
-                      <option value="5">9,10月</option>
-                      <option value="6">11,12月</option>
-                    
-                    </select> -->
-                    <div>發票號碼：
-                        <input type="text" name="code" style="width:50px;">
-                        <?php errFeedBack('code');?>
-                        <input type="number" name="number" style="width:150px;" min="00000001" max="99999999">
-                        <?php errFeedBack('number');?>
-                    </div>
-                    <div>發票金額：
-                        <input type="number" name="payment" min="0">
-                    </div>
-                    <div class="text-center">
-                        <input type="submit" value="送出">
-                    </div>
-                </form>
+<div class="enter_area">
+        <div class="btnPart">
+          <a href="index.php"><div class="btn1"></div></a>
+          <a href="invoice_list.php"><div class="btn2"></div></a>
+          <a href="add_awards.php"><div class="btn3"></div></a>
+          <a href="award_numbers.php"><div class="btn4"></div></a>
+        </div>
+        <div class="enterPart">
+          <form action="api/add_invoice.php" method="post">
+            <div class="date">
+              <label for="date">日期</label>
+              <input class="dateD hvr" id="date" name="date" type="date">
+            </div>
+            <div class="num">
+              <label for="num">發票號碼</label> 
+              <input class="num1 hvr" id="num" name="code" type="text">
+              <input class="num2 hvr" name="number" type="number">
+            </div>
+            <div class="pay">
+              <label for="pay">金額</label>
+              <input class="pay1 hvr" id="pay" name="payment" type="number">
+            </div>
+            <!-- <div class="item">
+              <label for="item">品項</label>
+              <input class="item1 hvr" id="item" type="text">
+            </div> -->
+            <!-- <div class="note">
+              <label for="note">備註</label>
+              <textarea class="note1 hvr" name="note" id="note"></textarea>
+            </div> -->
+            <div>
+              <input class="btnSave" type="submit" value="儲存">
+            </div>
+          </form>
+        </div>
+      </div>
