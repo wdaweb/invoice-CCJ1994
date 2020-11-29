@@ -10,9 +10,8 @@ print_r(array_keys($_POST));
 echo "</pre>";
 
 
-accept('date','日期欄位必填');
+accept('date','此欄位必填');
 accept('code','此欄位必填');
-accept('number','發票號碼欄位必填');
 length('number',8,8,"發票號碼為8碼");
 
 //期別直接從日期欄位值取出

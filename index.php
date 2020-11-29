@@ -47,5 +47,5 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
     </section>
 
 </body>
-
 </html>
+<?php $_SESSION['err']=[];?>

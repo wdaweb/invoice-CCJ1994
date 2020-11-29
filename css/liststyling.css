@@ -15,10 +15,10 @@ body{
 }
 /* 3大區塊 */
 .leftPart{
-  width: 150px;
+  width: 0px;
 }
 .middlePart{
-  width: 550px;
+  width: 700px;
 }
 .rightPart{
   width: 300px;
@@ -49,11 +49,12 @@ body{
   justify-content: space-around;
   margin: 10px;
   padding-top: 10px;
+  height: 35px;
 }
-.monthBar>li{
+.monthH{
   transition: 0.1s ease;
 }
-.monthBar>li:hover{
+.monthH:hover{
   border-bottom: 2px solid #95a5a6;
 }
 a{
@@ -65,17 +66,19 @@ a{
   font-size: 14px;
   text-align: center;
   height: 100%;
+  table-layout:fixed;
+  word-break:break-all;
+  
 }
 .listT>thead{
   display: inline-block;
   width: 100%;
   height: 40px;
   font-size: 15px;
-  border: solid 1px;
   margin: auto;
 }
 th{
-  padding:5px 30px ;
+  padding:5px 36px ;
 }
 .listT>tbody {
   
@@ -85,10 +88,15 @@ th{
   overflow: auto;
 }
 td{
-  padding: 10px;
+  width:110px;
+  overflow: hidden;
 }
 
-
+.iconED{
+  width: 25px;
+  height: 25px;
+  
+}
 
 
 
@@ -186,7 +194,9 @@ td{
   margin: 15px;
   font-size: 20px;
 }
-
+.date{
+  position: relative;
+}
 .dateD{
   padding-left:10px;
   font-size: 10px;
@@ -200,16 +210,15 @@ td{
             inset 3px 3px 5px rgba(94,104,121,0.288);
   outline:none;
 }
-.num{
+.numCode{
   position: relative;
   top:30px;
 }
 .num1{
   padding-left:10px;
-  width: 50px;
+  width: 85px;
   height: 30px;
-  top:40px;
-  left: 0px;
+  margin-left: 25px;
   position: absolute;
   border: 0;
   border-radius: 5px;
@@ -217,11 +226,14 @@ td{
             inset 3px 3px 5px rgba(94,104,121,0.288);
   outline:none;
 }
+.numNum{
+  position: relative;
+  top:60px;
+}
 .num2{
   padding-left:10px;
   width: 165px;
   height: 30px;
-  top: 40px;
   position: absolute;
   left: 65px;
   border: 0;
@@ -232,7 +244,7 @@ td{
 }
 .pay{
   position: relative;
-  top: 105px;
+  top: 90px;
 }
 .pay1{
   padding-left:10px;
@@ -249,7 +261,7 @@ td{
 
 .item{
   position: relative;
-  top:140px;
+  top:120px;
 }
 .item1{
   padding-left:10px;
@@ -265,13 +277,13 @@ td{
 }
 .note{
   position: relative;
-  top: 180px;
+  top: 150px;
 }
 .note1{
   padding:10px;
   padding-top:-100px;
   width: 165px;
-  height: 150px;
+  height: 130px;
   margin-left: 25px;
   position: absolute;
   border: 0;
@@ -288,7 +300,7 @@ td{
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .btnSave{
-  transform: translate(80px,310px);
+  transform: translate(80px,270px);
   width: 70px;
   height: 40px;
   border: 0;
@@ -301,4 +313,14 @@ td{
 .btnSave:active{
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+
+.errMsg{
+  transform: translate(-100px);
+}
+
+.errMsg{
+  position:absolute;
+  top:35px;
+  left: 0;
 }

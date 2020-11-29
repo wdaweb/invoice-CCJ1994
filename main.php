@@ -10,24 +10,32 @@
             <div class="date">
               <label for="date">日期</label>
               <input class="dateD hvr" id="date" name="date" type="date">
+              <?php errFeedBack('date');?>
             </div>
             <div class="num">
-              <label for="num">發票號碼</label> 
-              <input class="num1 hvr" id="num" name="code" type="text">
-              <input class="num2 hvr" name="number" type="number">
+              <div class="numCode">
+                <label for="numC">發票字軌英文</label> 
+                <input class="num1 hvr" id="numC" name="code" type="text" size="2">
+                <?php errFeedBack('code');?>
+              </div>
+              <div class="numNum">
+                <label for="numN">號碼</label> 
+                <input class="num2 hvr" id="numN" name="number" type="number"> 
+                <?php errFeedBack('number');?>
+              </div>
             </div>
             <div class="pay">
               <label for="pay">金額</label>
-              <input class="pay1 hvr" id="pay" name="payment" type="number">
+              <input class="pay1 hvr" id="pay" name="payment" type="number" min="0">
             </div>
-            <!-- <div class="item">
+            <div class="item">
               <label for="item">品項</label>
-              <input class="item1 hvr" id="item" type="text">
-            </div> -->
-            <!-- <div class="note">
+              <input class="item1 hvr" id="item" name="item" type="text">
+            </div>
+            <div class="note">
               <label for="note">備註</label>
               <textarea class="note1 hvr" name="note" id="note"></textarea>
-            </div> -->
+            </div>
             <div>
               <input class="btnSave" type="submit" value="儲存">
             </div>

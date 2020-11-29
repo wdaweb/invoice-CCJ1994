@@ -1,7 +1,7 @@
 <?php
 
 // 連線資料庫
-$dsn="mysql:host=localhost;dbname=invoice;charset=utf8";
+$dsn="mysql:host=localhost;dbname=invoiceHW;charset=utf8";
 $pdo=new PDO($dsn,'root','');
 
 // 時區設定
@@ -32,9 +32,9 @@ function errFeedBack($field){
   if(!empty($_SESSION['err'][$field])){
 
       foreach($_SESSION['err'][$field] as $err){
-          echo "<div style='font-size:12px;color:red'>";
+          echo "<span class='errMsg' style='font-size:6px;color:red;' >";
           echo $err;
-          echo "</div>";
+          echo "</span>";
       }
   }
 }
