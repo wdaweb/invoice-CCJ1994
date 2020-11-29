@@ -27,7 +27,7 @@ body{
 /* left */
 .user_area{
   margin: 20px;
-  height: 600px;
+  height: 580px;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73, 
               3px 3px 5px rgba(94,104,121,0.288);
@@ -37,7 +37,7 @@ body{
 /* middle */
   .list_area{
     margin: 20px;
-    height: 600px;
+    height: 580px;
     border-radius: 10px;
     box-shadow: -3px -3px 7px #ffffff73, 
                 3px 3px 5px rgba(94,104,121,0.288);
@@ -105,7 +105,7 @@ a{
 /* right */
 .enter_area{
   margin: 20px;
-  height: 600px;
+  height: 580px;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73, 
               3px 3px 5px rgba(94,104,121,0.288);   
@@ -144,7 +144,7 @@ a{
               3px 3px 5px rgba(94,104,121,0.288);
   border-radius: 10px;
   outline:none !important;
-  background:url("../img/icon2-01.svg") no-repeat 14px;
+  background:url("../img/icon3-01.svg") no-repeat 11px;
 }
 .btn2:active{
   color:black;
@@ -162,7 +162,7 @@ a{
   border:0px;
   border-radius: 10px;
   outline:none !important ;
-  background:url("../img/icon3-01.svg") no-repeat 11px;
+  background:url("../img/icon4-01.svg") no-repeat 6px;
 }
 
 .btn3:active{
@@ -178,7 +178,8 @@ a{
   border:0px;
   border-radius: 10px;
   outline:none !important ;
-  background:url("../img/icon4-01.svg") no-repeat 5px;
+  background:url("../img/user-01.svg") no-repeat 8px ;
+  background-size: 35px 35px;
 }
 
 .btn4:active{
@@ -298,8 +299,8 @@ a{
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .btnSave{
-  transform: translate(80px,270px);
-  width: 70px;
+  transform: translate(95px,260px);
+  width: 40px;
   height: 40px;
   border: 0;
   font-size: 20px;
@@ -307,6 +308,7 @@ a{
   box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
   border-radius: 10px;
   outline:none !important ;
+  background:url("../img/icon2-01.svg") no-repeat 8px ;
 }
 .btnSave:active{
   color:black;
