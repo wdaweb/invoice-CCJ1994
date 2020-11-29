@@ -22,9 +22,9 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
           <li><a href="?invoice_list&period=5"><div class="monthH">9-10月</div></a></li>
           <li><a href="?invoice_list&period=6"><div class="monthH">11-12月</div></a></li>
         </div>
-        <table class="listT">
+        <table class="invlist">
           <thead>
-            <tr>
+            <tr class="invlisttr">
               <th>日期</th>
               <th>發票號碼</th>
               <th>金額</th>
@@ -37,7 +37,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
 <?php
 foreach($rows as $row){
 ?>
-    <tr>
+    <tr class="invlisttr">
         <td><?=$row['date'];?></td>
         <td><?=$row['code'].$row['number'];?></td>
         <td><?=$row['payment'];?></td>
