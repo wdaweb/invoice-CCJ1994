@@ -1,5 +1,5 @@
 <form action="api/add_award_number.php" method="post">
-  <table class="" summary="統一發票中獎號碼單">
+  <table class="">
     <tbody>
       <tr>
         <th id="months">年月份</th>
