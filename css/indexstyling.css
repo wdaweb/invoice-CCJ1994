@@ -131,6 +131,8 @@ a{
   background:url("../img/icon1-01.svg") no-repeat 11px;
 }
 .btn1:active{
+  background:url("../img/icon1-02.svg") no-repeat 11px;
+  background-size: 30px 30px;
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
@@ -148,6 +150,8 @@ a{
   background:url("../img/icon3-01.svg") no-repeat 11px;
 }
 .btn2:active{
+  background:url("../img/icon3-02.svg") no-repeat 11px;
+  background-size: 30px 30px;
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
@@ -167,6 +171,8 @@ a{
 }
 
 .btn3:active{
+  background:url("../img/icon4-02.svg") no-repeat 6px;
+  background-size: 40px 40px;
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }
@@ -184,6 +190,8 @@ a{
 }
 
 .btn4:active{
+  background:url("../img/user-02.svg") no-repeat 8px ;
+  background-size: 35px 35px;
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
@@ -312,6 +320,8 @@ a{
   background:url("../img/icon2-01.svg") no-repeat 8px ;
 }
 .btnSave:active{
+  background:url("../img/icon2-02.svg") no-repeat 8px ;
+  background-size: 30px 30px;
   color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }
@@ -352,4 +362,23 @@ a{
 }
 .awardNum{
   color: #e67e22 ;
+}
+.awardbtn{
+  transform: translate(300px,15px);
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+  background:url("../img/award-01.svg") no-repeat 6px ;
+  background-size: 40px 40px;
+}
+.awardbtn:active{
+  color:black;
+  background:url("../img/award2-01.svg") no-repeat 6px ;
+  background-size: 40px 40px;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }

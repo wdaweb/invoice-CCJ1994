@@ -124,5 +124,5 @@ foreach($awards as $aw){
 </table>
 
 <a href="?do=all_awards&year=<?=$year;?>&period=<?=$period;?>">
-  <button class="">對獎</button>
+  <button class="awardbtn"></button>
 </a>
