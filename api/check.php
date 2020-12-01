@@ -1,4 +1,5 @@
 <?php
+include_once "../base.php";
 /******登入檢查******
  * 1. 連線資料庫
  * 2. 取得表單傳遞的帳密資料
@@ -24,7 +25,7 @@ if(!empty($check)){
   $member=$pdo->query($member_sql)->fetch();
   $role=$member['role'];
 
-  
+  $_SESSION['login']=$acc;
 
 
     switch($role){

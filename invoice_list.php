@@ -8,10 +8,10 @@ if(isset($_GET['period'])){
 }
 
 
-// $sql="select * from `invoices` where period='$period' order by date desc ";
-// $rows=$pdo->query($sql)->fetchALL();
+$sql="select * from `invoices` where `period`='$period' && `user_acc`='{$_SESSION['login']}'  order by date desc ";
+$rows=$pdo->query($sql)->fetchALL();
 
-$rows=all('invoices',['period'=>$period],' order by date desc ');
+// $rows=all('invoices',['period'=>$period],' order by date desc ');
 ?>
 
         <div class="monthBar">
@@ -22,6 +22,12 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
           <li><a href="?invoice_list&period=5"><div class="monthH">9-10月</div></a></li>
           <li><a href="?invoice_list&period=6"><div class="monthH">11-12月</div></a></li>
         </div>
+        <?php
+    if(isset($_SESSION['login'])){
+        echo "USER:".$_SESSION['login'];
+    }
+    ?>
+    <a href="api/logout.php">登出</a>
         <table class="invlist">
           <thead>
             <tr class="invlisttr">

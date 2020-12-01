@@ -1,9 +1,5 @@
 <?php
 include_once "base.php";
-
-
-
-
 ?>
 
 <!DOCTYPE html>

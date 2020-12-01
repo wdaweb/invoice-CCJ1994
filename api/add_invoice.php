@@ -17,6 +17,8 @@ length('number',8,8,"發票號碼為8碼");
 //期別直接從日期欄位值取出
 $_POST['period']=ceil(explode("-",$_POST['date'])[1]/2);
 
+$_POST['user_acc']=$_SESSION['login'];
+
 // $sql="insert into invoices (`".implode("`,`",array_keys($_POST))."`) 
 //       values ('".implode("','",$_POST)."')";
 // echo $sql;

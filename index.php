@@ -7,10 +7,10 @@ if(isset($_GET['period'])){
   $period=ceil(date("m")/2);
 }
 
-$user_id=$_GET['id'];
-$user_sql="select * from `login`,`member` where `login`.`id`=`member`.`login_id` && `login`.`id`='$user_id'";
-$user=$pdo->query($user_sql)->fetch();
-
+if(isset($_SESSION['login'])){
+  $sql_user="select `member`.`role`,`login`.`acc` from `member`,`login` where `member`.`login_id`=`login`.`id` && `acc`='{$_SESSION['login']}'";
+  $user=$pdo->query($sql_user)->fetch(PDO::FETCH_ASSOC);
+}
 // $sql="select * from `invoices` where period='$period' order by date desc ";
 // $rows=$pdo->query($sql)->fetchALL();
 
@@ -23,7 +23,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>發票記錄</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/indexstyling.css">
@@ -60,7 +60,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
         </div>
         <div class="enterPart">
           <form action="api/add_invoice.php" method="post">
-          <input type="hidden" name="user_id" value="<?=$user['id']?>">
+          <input type="hidden" name="user_acc" value="<?=$_SESSION['login'];?>">
             <div class="date">
               <label for="date">日期</label>
               <input class="dateD hvr" id="date" name="date" type="date">
