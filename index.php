@@ -7,6 +7,9 @@ if(isset($_GET['period'])){
   $period=ceil(date("m")/2);
 }
 
+$user_id=$_GET['id'];
+$user_sql="select * from `login`,`member` where `login`.`id`=`member`.`login_id` && `login`.`id`='$user_id'";
+$user=$pdo->query($user_sql)->fetch();
 
 // $sql="select * from `invoices` where period='$period' order by date desc ";
 // $rows=$pdo->query($sql)->fetchALL();
@@ -57,6 +60,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
         </div>
         <div class="enterPart">
           <form action="api/add_invoice.php" method="post">
+          <input type="hidden" name="user_id" value="<?=$user['id']?>">
             <div class="date">
               <label for="date">日期</label>
               <input class="dateD hvr" id="date" name="date" type="date">
