@@ -1,5 +1,11 @@
 <?php
 include_once "base.php";
+
+if(isset($_SESSION['login'])){
+  $sql_user="select `member`.`role`,`login`.`acc` from `member`,`login` where `member`.`login_id`=`login`.`id` && `acc`='{$_SESSION['login']}'";
+    $user=$pdo->query($sql_user)->fetch(PDO::FETCH_ASSOC);
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,10 +23,10 @@ include_once "base.php";
 <body>
     <section class="leftPart">
       <div class="user_area">
-      <h5 class="text-center py-3 border-bottom">會員登入</h5>
+      <h5 class="text-center py-3 border-bottom">帳戶登入</h5>
       <form action="api/check.php" class="mt-3 col-6 mx-auto" method="post">
-        <p class="text-center">帳號：<input type="text" name="acc"></p>
-        <p class="text-center">密碼：<input type="password" name="pw"></p>
+        <p class="text-center">帳號：<input type="text" name="acc"><?php errFeedBack('acc');?></p>
+        <p class="text-center">密碼：<input type="password" name="pw"><?php errFeedBack('pw');?></p>
         <p class="d-flex justify-content-around" style="font-size:0.87rem">
           <a href="forget_pw.php">忘記密碼?</a>
           <a href="register.php">註冊新帳號</a>

@@ -1,7 +1,6 @@
 <?php
 include_once "base.php";
 
-
 $inv=$pdo->query("select * from invoices where id='{$_GET['id']}'")->fetch();
 
 ?>

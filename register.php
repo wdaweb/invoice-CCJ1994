@@ -1,9 +1,5 @@
 <?php
 include_once "base.php";
-
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -21,17 +17,17 @@ include_once "base.php";
 <body>
     <section class="leftPart">
       <div class="user_area">
-      <h2>註冊會員</h2>
+      <h2>註冊帳號</h2>
     <form action="api/add_user.php" method="post" class="">
-        <ul class="list-group">
-            <li class="list-group-item">帳號：<input type="text" name="acc"></li>
-            <li class="list-group-item">密碼：<input type="password" name="pw"></li>
-            <li class="list-group-item">姓名：<input type="text" name="name"></li>
-            <li class="list-group-item">生日：<input type="date" name="birthday"></li>
-            <li class="list-group-item">email：<input type="text" name="email"></li>
+        <ul class="">
+            <li class="">帳號：<input type="text" name="acc"><?php errFeedBack('acc');?></li>
+            <li class="">密碼：<input type="password" name="pw"><?php errFeedBack('pw');?></li>
+            <li class="">姓名：<input type="text" name="name"><?php errFeedBack('name');?></li>
+            <li class="">生日：<input type="date" name="birthday"><?php errFeedBack('birthday');?></li>
+            <li class="">email：<input type="text" name="email"><?php errFeedBack('email');?></li>
         </ul>
-        <input class="btn btn-primary my-3" type="submit" value="確認新增">
-        <input class="btn btn-light my-3" type="reset" value="重填">
+        <input class="" type="submit" value="確認新增">
+        <input class="" type="reset" value="重填">
     </form>
 
       </div>

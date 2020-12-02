@@ -1,7 +1,11 @@
 <?php
-
-$dsn="mysql:host=localhost;dbname=invoiceHW;charset=utf8";
-$pdo=new PDO($dsn,'root','');
+include_once "../base.php";
+$_SESSION['err']=[];
+accept('acc','此欄位必填');
+accept('name','此欄位必填');
+accept('birthday','此欄位必填');
+accept('email','此欄位必填');
+length('pw',3,9,"密碼需要在4~8碼之間");
 
 $acc=$_POST['acc'];
 $pw=$_POST['pw'];
@@ -24,10 +28,10 @@ $insert_to_member="insert into `member`(`name`,`birthday`,`role`,`login_id`) val
 $result=$pdo->exec($insert_to_member);
 echo $result;
 print_r($result);
-if($result){
-  header("location:../login.php?meg=新增成功");
+if($result && empty($_SESSION['err'])){
+  header("location:../index.php?meg=新增成功");
 }else{
-  header("location:../login.php?meg=新增失敗");
+  header("location:../register.php?meg=新增失敗");
 }
 
 ?>

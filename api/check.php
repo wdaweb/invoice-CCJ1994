@@ -1,6 +1,9 @@
 <?php
 include_once "../base.php";
+$_SESSION['err']=[];
 
+accept('acc','此欄位必填');
+accept('pw','此欄位必填');
 /******登入檢查******
  * 1. 連線資料庫
  * 2. 取得表單傳遞的帳密資料
@@ -10,8 +13,6 @@ include_once "../base.php";
  * 6. 依據會員身份導向不同的頁面
  */
 
-$dsn="mysql:host=localhost;dbname=invoiceHW;charset=utf8";
-$pdo=new PDO($dsn,'root','');
 $acc=$_POST['acc'];
 $pw=$_POST['pw'];
 
@@ -19,13 +20,12 @@ $sql="select * from `login` where `acc`='$acc' && `pw`='$pw'";
 
 $check=$pdo->query($sql)->fetch();
 
-if(!empty($check)){
+if(!empty($check) && empty($_SESSION['err'])){
   echo "登入成功";
 
   $member_sql="select * from member where login_id='{$check['id']}'";
   $member=$pdo->query($member_sql)->fetch();
   $role=$member['role'];
-
   $_SESSION['login']=$acc;
 
 
