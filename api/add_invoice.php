@@ -28,11 +28,11 @@ save('invoices',$_POST);
 echo "新增完成";
 if(empty($_SESSION['err'])){
   $pdo->exec($sql);
-  // header("location:../index.php?do=invoice_list");
-  to("../index.php?do=invoice_list");
+  // header("location:../invoice.php?do=invoice_list");
+  to("../invoice.php?do=invoice_list");
 }else{
-  // header("location:../index.php");
-  to("../index.php");
+  // header("location:../invoice.php");
+  to("../invoice.php");
 }
 
 

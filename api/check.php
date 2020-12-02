@@ -1,5 +1,6 @@
 <?php
 include_once "../base.php";
+
 /******登入檢查******
  * 1. 連線資料庫
  * 2. 取得表單傳遞的帳密資料
@@ -30,14 +31,14 @@ if(!empty($check)){
 
     switch($role){
       case "會員" :
-        header('location:../index.php');
+        header('location:../invoice.php');
       break;
       case "管理員" :
         header('location:../admin.php');
       break;
     }
 }else{
-  header("location:../login.php?meg=帳密不正確，請重新登入或註冊會員");
+  header("location:../index.php?meg=帳密不正確，請重新登入或註冊會員");
 }
 
 
