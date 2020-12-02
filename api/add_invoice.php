@@ -12,7 +12,7 @@ echo "</pre>";
 
 accept('date','此欄位必填');
 accept('code','此欄位必填');
-length('number',8,8,"發票號碼為8碼");
+length('number',7,9,"發票號碼為8碼");
 
 //期別直接從日期欄位值取出
 $_POST['period']=ceil(explode("-",$_POST['date'])[1]/2);
