@@ -7,11 +7,11 @@
           <input type="number" name="year" min="<?=date("Y")-1;?>" max="<?=date("Y")+1;?>" step="1"
             value="<?=date("Y");?>">年
           <select name="period">
-            <option value="1">01 ~ 02</option>
-            <option value="2">03 ~ 04</option>
-            <option value="3">05 ~ 06</option>
-            <option value="4">07 ~ 08</option>
-            <option value="5">09 ~ 10</option>
+            <option value="1">1 ~ 2</option>
+            <option value="2">3 ~ 4</option>
+            <option value="3">5 ~ 6</option>
+            <option value="4">7 ~ 8</option>
+            <option value="5">9 ~ 10</option>
             <option value="6">11 ~ 12</option>
           </select>月
         </td>

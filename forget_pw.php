@@ -43,6 +43,7 @@ if(isset($_POST['email'])){
     if(isset($res)){
 
         echo "密碼：".$res;
+        echo "<br><a href='index.php'>立即登入</a>";
     }
     ?>
     </span>

@@ -26,7 +26,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
   <title>登錄發票</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/indexstyling.css">
+  <link rel="stylesheet" href="./css/invoiceStyling.css">
 </head>
 
 <body>
@@ -56,7 +56,7 @@ $rows=all('invoices',['period'=>$period],' order by date desc ');
           <a href="invoice.php"><div class="btn1"></div></a>
           <a href="?do=add_awards"><div class="btn2"></div></a>
           <a href="?do=award_numbers"><div class="btn3"></div></a>
-          <a href=""><div class="btn4"></div></a>
+          <a href="?do=account"><div class="btn4"></div></a>
         </div>
         <div class="enterPart">
           <form action="api/add_invoice.php" method="post">
