@@ -10,7 +10,7 @@ $period_str=[
     6=>"11,12月"
 ];
 
-echo "你要對的發票是".$_GET['year']."年的";
+echo "本期為".$_GET['year']."年";
 echo $period_str[$_GET['period']]."的發票";
 
 // 撈出該期的所有發票
@@ -19,7 +19,7 @@ $sql="select * from invoices where left(date,4)='{$_GET['year']}' && period='{$_
 $invoices=$pdo->query($sql)->fetchALL();
 
 
-echo "<br>".count($invoices)."筆<br>";
+echo "<br>共有".count($invoices)."張<br>";
 // echo "<pre>";
 // print_r($invoices);
 // echo "</pre>";
@@ -30,9 +30,9 @@ $sql="select * from award_numbers where year='{$_GET['year']}' && period='{$_GET
 $award_numbers=$pdo->query($sql)->fetchALL(PDO::FETCH_ASSOC);
 
 if(!empty($award_numbers)){
-  // echo "<pre>";
-  // print_r($award_numbers);
-  // echo "</pre>";
+//   echo "<pre>";
+//   print_r($award_numbers);
+//   echo "</pre>";
 }else{
   echo "尚未開獎";
 }
@@ -67,14 +67,15 @@ foreach($award_numbers as $award){
     switch($award['type']){
         case 1:
             if($award['number']==$number){
-                echo "<br>號碼=".$number."<br>";
+                echo "<br>號碼：".$number."<br>";
                 echo "中了特別獎";
                 $all_res=1;
+                
             }
         break;
         case 2:
             if($award['number']==$number){
-                echo "<br>號碼=".$number."<br>";
+                echo "<br>號碼：".$number."<br>";
                 echo "中了特獎";
                 $all_res=1;
             }
@@ -94,16 +95,25 @@ foreach($award_numbers as $award){
             }
             if($res!=-1){
 
-                echo "<br>號碼=".$number."<br>";
+                echo "<br>號碼：".$number."<br>";
                 echo "中了{$awardStr[$res]}獎";
                 $all_res=1;
             }
         break;
         case 4:
             if($award['number']==mb_substr($number,5,3,'utf8')){
-                echo "<br>號碼=".$number."<br>";
+                echo "<br>號碼：".$number."<br>";
                 echo "中了增六獎";
                 $all_res=1;
+
+                // $oldrecord="select * from `awards_record` where `user`='{$_SESSION['login']}'";
+                //     $pdo->query($oldrecord)->fetchALL(PDO::FETCH_ASSOC);
+                //         $newrecord="insert into `awards_record`(`user`,`type`,`bonus`,`year`,`period`,`number`) values ('{$_SESSION['login']}','增六獎','200','{$_GET['year']}','{$_GET['period']}','$number') ";
+                //         $pdo->exec($newrecord);
+                // if(!empty($oldrecord['number']) && $oldrecord['number']==$number){
+                    
+                //     }
+                
             }
         break;
     }
@@ -114,7 +124,8 @@ foreach($award_numbers as $award){
   }
 
 
-
+  
+  
 
 
 ?>

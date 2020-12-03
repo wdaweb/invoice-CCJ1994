@@ -1,14 +1,6 @@
 <?php
 include_once "base.php";
 
-if(empty($_GET['pd'])){
-?>
-  <h1>沒有任何獎號紀錄，請先<a href="?do=add_awards">輸入獎號</a></h1>
-
-<?php
-}else{
-
-
 if(isset($_GET['pd'])){
     $year=explode("-",$_GET['pd'])[0];
     $period=explode("-",$_GET['pd'])[1];
@@ -136,6 +128,3 @@ foreach($awards as $aw){
 <a href="?do=all_awards&year=<?=$year;?>&period=<?=$period;?>">
   <button class="awardbtn"></button>
 </a>
-<?php
-}
-?>
