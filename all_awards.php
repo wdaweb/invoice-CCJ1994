@@ -1,6 +1,7 @@
 <?php
 include_once "base.php";
 
+
 $period_str=[
     1=>"1,2月",
     2=>"3,4月",
@@ -83,54 +84,43 @@ foreach($award_numbers as $award){
         case 3:
             $res=-1;
             for($i=5;$i>=0;$i--){
-                $target=mb_substr($award['number'],$i,(8-$i),'utf8');
-                $mynumber=mb_substr($number,$i,(8-$i),'utf8');
-
-                if($target==$mynumber){
-                    
-                    $res=$i;
-                }else{
-                break;
+            $target=mb_substr($award['number'],$i,(8-$i),'utf8');
+            $mynumber=mb_substr($number,$i,(8-$i),'utf8');
+            if($target==$mynumber){
+                
+                $res=$i;
+            }else{
+            break;
+            }
                 }
-            }
-            if($res!=-1){
+                if($res!=-1){
 
-                echo "<br>號碼：".$number."<br>";
-                echo "中了{$awardStr[$res]}獎";
-                $all_res=1;
-            }
+                    echo "<br>號碼：".$number."<br>";
+                    echo "中了{$awardStr[$res]}獎";
+                    $all_res=1;
+                }
         break;
         case 4:
-            if($award['number']==mb_substr($number,5,3,'utf8')){
-                echo "<br>號碼：".$number."<br>";
-                echo "中了增六獎";
-                $all_res=1;
-
-                // $oldrecord="select * from `awards_record` where `user`='{$_SESSION['login']}'";
-                //     $pdo->query($oldrecord)->fetchALL(PDO::FETCH_ASSOC);
+            
+                if($award['number']==mb_substr($number,5,3,'utf8')){
+                    echo "<br>號碼：".$number."<br>";
+                    echo "中了增六獎";
+                    $all_res=1; 
+                    $awnum=$number;
+                }
                 
-                $newrecord="insert into `awards_record`(`user`,`type`,`bonus`,`year`,`period`,`number`)
-                select '{$_SESSION['login']}','增六獎','200','{$_GET['year']}','{$_GET['period']}','$number' from suppliers 
-                where not exists (select * from `awards_record` where  `awards_record`.`number`=`suppliers`.'number') ";
-                //         $pdo->exec($newrecord);
-                // if(!empty($oldrecord['number']) && $oldrecord['number']==$number){
-                    
-                //     }
                 
+            break;
             }
-        break;
     }
-}
-}
-  if($all_res==-1){
-    echo "很可惜都沒中";
-  }
-
-
-  
+    }
+    if($all_res==-1){
+        echo "很可惜都沒中";
+    }
+    
+    
+    
   
 
 
 ?>
-
-

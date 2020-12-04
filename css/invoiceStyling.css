@@ -332,6 +332,108 @@ a{
   left: 0;
 }
 
+/* add_awards.php */
+.top{
+  display: flex;
+  height: 80px;
+  padding: 30px;
+  font-size: 25px;
+  margin: auto;
+}
+.year{
+  padding-left:25px;
+  width: 100px;
+  height: 40px;
+  margin: 0 15px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.period{
+  padding-left:20px;
+  width: 100px;
+  height: 40px;
+  margin: 0 15px;
+  font-size: 20px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.prize1{
+  color: #e67e22;
+  padding-left:20px;
+  font-size: 15px;
+  width: 140px;
+  height: 30px;
+  margin: 0 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ecf0f3;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.prize3{
+  color: #e67e22;
+  padding-left:5px;
+  font-size: 15px;
+  width: 80px;
+  height: 30px;
+  margin: 0 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ecf0f3;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.prize4{
+  color: #e67e22;
+  padding-left:5px;
+  font-size: 15px;
+  width: 80px;
+  height: 30px;
+  margin: 0 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #ecf0f3;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.sm{
+  margin-left: 15px;
+}
+
+
+.awlbtn{
+  transform: translate(300px,15px);
+  width: 50px;
+  height: 50px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+  background:url("../img/saveaw-01.svg") no-repeat 6px ;
+  background-size: 40px 40px;
+}
+.awlbtn:active{
+  color:black;
+  background:url("../img/saveaw2-01.svg") no-repeat 6px ;
+  background-size: 40px 40px;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+
+
+
+
 /* award_numbers.php */
 
 .newAwardTitle{
@@ -364,7 +466,7 @@ a{
   color: #e67e22 ;
 }
 .awardbtn{
-  transform: translate(300px,15px);
+  transform: translate(300px,10px);
   width: 50px;
   height: 50px;
   border: 0;

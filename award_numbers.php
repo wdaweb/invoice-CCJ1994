@@ -48,7 +48,7 @@ foreach($awards as $aw){
   <li><a href="?do=award_numbers&pd=<?=$year;?>-5"><div class="monthH">9-10月</div></a></li>
   <li><a href="?do=award_numbers&pd=<?=$year;?>-6"><div class="monthH">11-12月</div></a></li>
 </div>
-  <h3 class="newAwardTitle">
+  <h3 class="newAwardTitle">本期為
     <?=$year;?>年
         <?php
             $month=[
@@ -126,5 +126,5 @@ foreach($awards as $aw){
 </table>
 
 <a href="?do=all_awards&year=<?=$year;?>&period=<?=$period;?>">
-  <button class="awardbtn"></button>
+  <div class="awardbtn"></div>
 </a>
