@@ -108,7 +108,10 @@ foreach($award_numbers as $award){
 
                 // $oldrecord="select * from `awards_record` where `user`='{$_SESSION['login']}'";
                 //     $pdo->query($oldrecord)->fetchALL(PDO::FETCH_ASSOC);
-                //         $newrecord="insert into `awards_record`(`user`,`type`,`bonus`,`year`,`period`,`number`) values ('{$_SESSION['login']}','增六獎','200','{$_GET['year']}','{$_GET['period']}','$number') ";
+                
+                $newrecord="insert into `awards_record`(`user`,`type`,`bonus`,`year`,`period`,`number`)
+                select '{$_SESSION['login']}','增六獎','200','{$_GET['year']}','{$_GET['period']}','$number' from suppliers 
+                where not exists (select * from `awards_record` where  `awards_record`.`number`=`suppliers`.'number') ";
                 //         $pdo->exec($newrecord);
                 // if(!empty($oldrecord['number']) && $oldrecord['number']==$number){
                     
