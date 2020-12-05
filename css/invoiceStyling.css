@@ -60,9 +60,35 @@ body{
 a{
   text-decoration: none ;
 }
+.userbar{
+  padding: 10px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.logout{
+  margin:5px 10px 5px 30px;
+  width: 40px;
+  height:40px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border:0px;
+  border-radius: 50%;
+  outline:none !important ;
+  background:url("../img/logout-01.svg") no-repeat 6px ;
+  background-size: 35px 35px;
+}
+  
+.logout:active{
+  background:url("../img/logout-02.svg") no-repeat 6px ;
+  background-size: 35px 35px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
 .invlist{
   margin: auto;
-  width: 100%;
+  width: 650px;
   font-size: 14px;
   text-align: center;
   height: 100%;
@@ -80,8 +106,7 @@ a{
   padding:5px 35px;
 }
 .invlist>tbody {
-  
-  height: 460px;
+  height: 400px;
   display: inline-block;
   width: 100%;
   overflow: auto;
@@ -96,6 +121,7 @@ a{
   height: 25px;
   
 }
+
 
 
 
@@ -133,7 +159,6 @@ a{
 .btn1:active{
   background:url("../img/icon1-02.svg") no-repeat 11px;
   background-size: 30px 30px;
-  color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
@@ -152,7 +177,6 @@ a{
 .btn2:active{
   background:url("../img/icon3-02.svg") no-repeat 11px;
   background-size: 30px 30px;
-  color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
@@ -173,7 +197,6 @@ a{
 .btn3:active{
   background:url("../img/icon4-02.svg") no-repeat 6px;
   background-size: 40px 40px;
-  color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .btn4{
@@ -192,7 +215,6 @@ a{
 .btn4:active{
   background:url("../img/user-02.svg") no-repeat 8px ;
   background-size: 35px 35px;
-  color:black;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }

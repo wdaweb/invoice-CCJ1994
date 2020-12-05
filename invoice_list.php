@@ -22,12 +22,18 @@ $rows=$pdo->query($sql)->fetchALL();
           <li><a href="?invoice_list&period=5"><div class="monthH">9-10月</div></a></li>
           <li><a href="?invoice_list&period=6"><div class="monthH">11-12月</div></a></li>
         </div>
+        <div class="userbar">
+        <div>
+
+        
         <?php
     if(isset($_SESSION['login'])){
-        echo "USER:".$_SESSION['login'];
+        echo $_SESSION['login'];
     }
     ?>
-    <a href="api/logout.php">登出</a>
+    </div>
+    <a class="logout" href="api/logout.php"><div ></div></a>
+    </div>
         <table class="invlist">
           <thead>
             <tr class="invlisttr">

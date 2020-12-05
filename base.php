@@ -32,7 +32,7 @@ function errFeedBack($field){
   if(!empty($_SESSION['err'][$field])){
 
       foreach($_SESSION['err'][$field] as $err){
-          echo "<span class='errMsg' style='font-size:6px;color:red;' >";
+          echo "<span class='errMsg' style='font-size:6px;color:#e74c3c;' >";
           echo $err;
           echo "</span>";
       }

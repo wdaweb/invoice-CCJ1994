@@ -11,16 +11,29 @@ body{
 }
 
 .leftPart{
+  padding-top: 80px;
   height: 90vh;
   width: 500px;
   margin:20px auto;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73, 
               3px 3px 5px rgba(94,104,121,0.288);
+              
 }
 
-.user_area{
+.usericon{
+  position: relative;
+  margin:auto;
+  width: 100px;
+  height:100px;
+  background: url("../img/user-01.svg") no-repeat 20px 15px;
+  background-size: 60px 60px;
+  border-radius: 50%;
+  background-color: #eee;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
   
-      
 }
-
+.meg{
+  color: #e74c3c;
+}

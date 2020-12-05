@@ -23,7 +23,14 @@ if(isset($_SESSION['login'])){
 <body>
     <section class="leftPart">
       <div class="user_area">
-      <h5 class="text-center py-3 border-bottom">帳戶登入</h5>
+      <div class="usericon"></div>
+      <h4 class="meg"> 
+        <?php
+      if(isset($_GET['meg'])){
+        echo $_GET['meg'];
+      }
+      ?>
+      </h4>
       <form action="api/check.php" class="mt-3 col-6 mx-auto" method="post">
         <p class="text-center">帳號：<input type="text" name="acc"><?php errFeedBack('acc');?></p>
         <p class="text-center">密碼：<input type="password" name="pw"><?php errFeedBack('pw');?></p>
