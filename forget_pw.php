@@ -32,22 +32,22 @@ if(isset($_POST['email'])){
 
 <body>
     <section class="leftPart">
-      <div class="user_area">
-      <h3 class="">查詢密碼</h3>
       <form action="?" class="" method="post">
-        <p class="">信箱：<input type="text" name="email" require></p>
-        <p class=""><input type="submit" value="查詢"></p>
-      </form>
-      <span>
-    <?php
-    if(isset($res)){
-
-        echo "密碼：".$res;
-        echo "<br><a href='index.php'>立即登入</a>";
-    }
-    ?>
-    </span>
+        <div class="findpw">
+          <div class="">查詢密碼</div>
+        <div class="">信箱：<input type="text" name="email" require></div>
+        <div class=""><input type="submit" value="查詢"></div>
+        <span>
+      <?php
+      if(isset($res)){
+  
+          echo "密碼：".$res;
+          echo "<br><a href='index.php'>立即登入</a>";
+      }
+      ?>
+      </span>
       </div>
+      </form>
     </section>
     
 

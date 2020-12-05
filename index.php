@@ -31,16 +31,18 @@ if(isset($_SESSION['login'])){
       }
       ?>
       </h4>
-      <form action="api/check.php" class="mt-3 col-6 mx-auto" method="post">
-        <p class="text-center">帳號：<input type="text" name="acc"><?php errFeedBack('acc');?></p>
-        <p class="text-center">密碼：<input type="password" name="pw"><?php errFeedBack('pw');?></p>
-        <p class="d-flex justify-content-around" style="font-size:0.87rem">
+      <form action="api/check.php" method="post">
+      <div class="loginarea">
+        <div class="acc">帳號<input class="accipt" type="text" name="acc"></div>
+        <div class="pw">密碼<input class="pwipt" type="password" name="pw"></div>
+        <div class="forget" >
           <a href="forget_pw.php">忘記密碼?</a>
           <a href="register.php">註冊新帳號</a>
-        </p>
-        <p class="text-center"><input type="submit" value="登入"></p>
-      </form>
+        </div>
+        <input class="loginbtn" type="submit" value="登入"></div>
+        
       </div>
+      </form>
     </section>
     
 

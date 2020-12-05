@@ -2,8 +2,6 @@
 include_once "../base.php";
 $_SESSION['err']=[];
 
-accept('acc','此欄位必填');
-accept('pw','此欄位必填');
 /******登入檢查******
  * 1. 連線資料庫
  * 2. 取得表單傳遞的帳密資料
@@ -38,7 +36,7 @@ if(!empty($check) && empty($_SESSION['err'])){
       break;
     }
 }else{
-  header("location:../index.php?meg=帳密不正確，請重新登入或註冊會員");
+  header("location:../index.php?meg=請重新登入或註冊會員");
 }
 
 

@@ -11,9 +11,9 @@ body{
 }
 
 .leftPart{
-  padding-top: 80px;
+  padding-top: 60px;
   height: 90vh;
-  width: 500px;
+  width: 400px;
   margin:20px auto;
   border-radius: 10px;
   box-shadow: -3px -3px 7px #ffffff73, 
@@ -22,7 +22,7 @@ body{
 }
 
 .usericon{
-  position: relative;
+  margin: 50px;
   margin:auto;
   width: 100px;
   height:100px;
@@ -35,5 +35,85 @@ body{
   
 }
 .meg{
+  text-align: center;
   color: #e74c3c;
+}
+.loginarea{
+  display: flex;
+  margin:auto;
+  width: 400px;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.acc{
+  
+  padding: 10px 0 0 40px;
+  position: relative;
+  width: 230px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73, 
+              3px 3px 5px rgba(94,104,121,0.288);
+
+}
+.accipt{
+  padding-left:10px;
+  width: 100px;
+  height: 30px;
+  margin-left: 40px;
+  position: absolute;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.pw{
+  margin: 40px 0 30px 0;
+  padding: 10px 0 0 40px;
+  position: relative;
+  width: 230px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: -3px -3px 7px #ffffff73, 
+              3px 3px 5px rgba(94,104,121,0.288);
+
+}
+.pwipt{
+  padding-left:10px;
+  width: 100px;
+  height: 30px;
+  margin-left: 40px;
+  position: absolute;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.forget{
+  font-size: 18px;
+  padding-left:80px ;
+}
+.loginbtn{
+  transform: translate(-130px,50px);
+  width: 80px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+}
+.loginbtn:active{
+  color:#15e38a;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.findpw{
+  display: flex;
+  margin:auto;
+  width: 400px;
+  flex-flow: column wrap;
+  align-content: center;
+  
 }
