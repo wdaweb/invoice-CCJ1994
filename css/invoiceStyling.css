@@ -506,3 +506,27 @@ a{
   background-size: 40px 40px;
   box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
 }
+
+/* edit_invoice.php */
+
+.editTitle{
+  padding: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+.editpart{
+  width: 600px;
+  height: 450px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  margin:auto;
+  background-color: #eee;
+  flex-flow: column wrap;
+  align-content: center;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+

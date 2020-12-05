@@ -33,8 +33,15 @@ if(isset($_SESSION['login'])){
       </h4>
       <form action="api/check.php" method="post">
       <div class="loginarea">
-        <div class="acc">帳號<input class="accipt" type="text" name="acc"></div>
-        <div class="pw">密碼<input class="pwipt" type="password" name="pw"></div>
+
+        <div class="acc">
+          <label for="acc">帳號</label>
+          <input class="accipt" id="acc" type="text" name="acc">
+        </div>
+        <div class="pw">
+          <label for="pw">密碼</label>
+          <input class="pwipt" id="pw" type="password" name="pw">
+        </div>
         <div class="forget" >
           <a href="forget_pw.php">忘記密碼?</a>
           <a href="register.php">註冊新帳號</a>

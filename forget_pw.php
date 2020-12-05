@@ -32,12 +32,16 @@ if(isset($_POST['email'])){
 
 <body>
     <section class="leftPart">
-      <form action="?" class="" method="post">
+      <form action="?" method="post">
         <div class="findpw">
-          <div class="">查詢密碼</div>
-        <div class="">信箱：<input type="text" name="email" require></div>
-        <div class=""><input type="submit" value="查詢"></div>
-        <span>
+          <div ><label for="fpw">查 詢 密 碼</label></div>
+          <div class="fline"></div>
+        <div class="findipt">
+          <input class="spw" id="fpw" type="text" name="email" placeholder="請輸入信箱" require>
+        <input class="findbtn" type="submit" value="">
+      </div>
+        <div class="hint">
+        
       <?php
       if(isset($res)){
   
@@ -45,7 +49,8 @@ if(isset($_POST['email'])){
           echo "<br><a href='index.php'>立即登入</a>";
       }
       ?>
-      </span>
+      
+      </div>
       </div>
       </form>
     </section>

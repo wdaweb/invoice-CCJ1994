@@ -17,17 +17,40 @@ include_once "base.php";
 <body>
     <section class="leftPart">
       <div class="user_area">
-      <h2>註冊帳號</h2>
-    <form action="api/add_user.php" method="post" class="">
-        <ul class="">
-            <li class="">帳號：<input type="text" name="acc"><?php errFeedBack('acc');?></li>
-            <li class="">密碼：<input type="password" name="pw"><?php errFeedBack('pw');?></li>
-            <li class="">姓名：<input type="text" name="name"><?php errFeedBack('name');?></li>
-            <li class="">生日：<input type="date" name="birthday"><?php errFeedBack('birthday');?></li>
-            <li class="">email：<input type="text" name="email"><?php errFeedBack('email');?></li>
-        </ul>
-        <input class="" type="submit" value="確認新增">
-        <input class="" type="reset" value="重填">
+        <form action="api/add_user.php" method="post" class="">
+        <div class="regpart">
+          <div>註 冊 帳 號</div>
+          <div class="fline"></div>
+          <div>
+            <label for="acc1">帳號 </label>
+            <input class="info" id="acc1" type="text" name="acc">
+            <span><?php errFeedBack('acc');?></span>
+        </div>
+          <div>
+            <label for="pw1">密碼 </label>
+            <input class="info" id="pw1" type="password" name="pw">
+            <span><?php errFeedBack('pw');?></span>
+          </div>         
+          <div>
+            <label for="name1">姓名 </label>
+            <input class="info" id="name1" type="text" name="name">
+            <span><?php errFeedBack('name');?></span>
+          </div>
+          <div>
+            <label for="bir1">生日 </label>
+            <input class="info" id="bir1" type="date" name="birthday">
+            <span><?php errFeedBack('birthday');?></span>
+          </div>
+          <div>
+            <label for="email1">信箱 </label>
+            <input class="info" id="email1" type="text" name="email">
+            <span><?php errFeedBack('email');?></span>
+          </div>
+          <div>
+            <input class="add" type="submit" value="註冊">
+            <input class="add" type="reset" value="重填">
+          </div> 
+        </div>   
     </form>
 
       </div>

@@ -5,7 +5,7 @@ accept('acc','此欄位必填');
 accept('name','此欄位必填');
 accept('birthday','此欄位必填');
 accept('email','此欄位必填');
-length('pw',3,9,"密碼需要在4~8碼之間");
+length('pw',3,9,"需為4~8碼");
 
 $acc=$_POST['acc'];
 $pw=$_POST['pw'];
