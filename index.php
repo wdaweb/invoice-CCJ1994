@@ -36,11 +36,11 @@ if(isset($_SESSION['login'])){
 
         <div class="acc">
           <label for="acc">帳號</label>
-          <input class="accipt" id="acc" type="text" name="acc">
+          <input class="accipt" id="acc" type="text" name="acc" required>
         </div>
         <div class="pw">
           <label for="pw">密碼</label>
-          <input class="pwipt" id="pw" type="password" name="pw">
+          <input class="pwipt" id="pw" type="password" name="pw" required>
         </div>
         <div class="forget" >
           <a href="forget_pw.php">忘記密碼?</a>
