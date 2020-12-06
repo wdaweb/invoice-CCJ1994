@@ -652,7 +652,7 @@ a{
   text-align: center;
   display: flex;
   margin:auto;
-  background-color: #eee;
+  background-color: #fff;
   flex-flow: column wrap;
   align-content: center;
   border-radius: 5px;
@@ -707,12 +707,12 @@ a{
 
 .accTitle{
   padding: 10px 0 0 30px;
-  text-align: left;
+  text-align: center;
   font-size: 25px;
 }
 .line3{
   margin:10px auto;
-  width: 600px;
+  width: 350px;
   height: 5px;
   background: #fff;
   border-radius: 10%;
@@ -720,7 +720,7 @@ a{
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
 .accpart{
-  width: 600px;
+  width: 350px;
   height: 450px;
   padding: 20px;
   font-size: 20px;
@@ -733,6 +733,28 @@ a{
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
-li{
-  list-style: none !important;
+.detail{
+  margin-top: 20px;
+}
+
+/* all_awards.php */
+
+.allawdTitle{
+  padding: 10px 0 0 30px;
+  text-align: left;
+  font-size: 25px;
+}
+.awnumpart{
+  width: 600px;
+  height: 450px;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  margin:auto;
+  background-color: #eee;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
 }
