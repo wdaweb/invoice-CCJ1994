@@ -510,12 +510,21 @@ a{
 /* edit_invoice.php */
 
 .editTitle{
-  padding: 20px;
+  padding-top: 10px;
   text-align: center;
   font-size: 25px;
 }
+.line2{
+  margin:10px auto;
+  width: 320px;
+  height: 5px;
+  background: #fff;
+  border-radius: 10%;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
 .editpart{
-  width: 600px;
+  width: 320px;
   height: 450px;
   padding: 20px;
   font-size: 20px;
@@ -529,4 +538,201 @@ a{
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }
+.codeipt{
+  padding-left:10px;
+  width: 50px;
+  height: 30px;
+  margin: 15px 0 15px 20px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.numipt{
+  padding-left:10px;
+  width: 100px;
+  height: 30px;
+  margin: 15px 0 15px 5px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.payipt{
+  padding-left:10px;
+  width: 155px;
+  height: 30px;
+  margin: 15px 0 15px 25px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.datipt{
+  padding-left:10px;
+  width: 155px;
+  height: 30px;
+  margin: 15px 0 15px 25px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.itemipt{
+  padding-left:10px;
+  width: 155px;
+  height: 30px;
+  margin: 15px 0 15px 25px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
+.noteipt{
+  padding-left:10px;
+  width: 155px;
+  height: 30px;
+  margin: 15px 0 15px 25px;
+  border: 0;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+  outline:none;
+}
 
+.ebtn{
+  margin-top: 25px;
+  width: 50px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+  background-size: 40px 40px;
+}
+.ebtn:active{
+  color:#15e38a;
+  background-size: 40px 40px;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.rbtn{
+  margin-top: 25px 0 0 25px;
+  width: 50px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+  background-size: 40px 40px;
+  
+}
+.rbtn:active{
+  color:#15e38a;
+  background-size: 40px 40px;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+
+
+/* del.php */
+
+.delpart{
+  width: 320px;
+  height: 400px;
+  padding: 20px;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  margin:auto;
+  background-color: #eee;
+  flex-flow: column wrap;
+  align-content: center;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+
+}
+.delpart>div{
+  text-align: left;
+  margin-top: 20px;
+}
+
+.canbtn{
+  margin-top: 25px;
+  width: 60px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+  background-size: 40px 40px;
+}
+.canbtn:active{
+  color:#15e38a;
+  background-size: 40px 40px;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.conbtn{
+  color: #c0392b;
+  margin-top: 25px;
+  margin-left: 50px;
+  width: 100px;
+  height: 40px;
+  border: 0;
+  font-size: 20px;
+  background-color:#ecf0f3;
+  box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121,0.288);
+  border-radius: 10px;
+  outline:none !important ;
+  background-size: 40px 40px;
+}
+.conbtn:active{
+  color:#e74c3c;
+  background-size: 40px 40px;
+  box-shadow:inset -3px -3px 7px #ffffff73,inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+
+
+/* account.php */
+
+.accTitle{
+  padding: 10px 0 0 30px;
+  text-align: left;
+  font-size: 25px;
+}
+.line3{
+  margin:10px auto;
+  width: 600px;
+  height: 5px;
+  background: #fff;
+  border-radius: 10%;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+.accpart{
+  width: 600px;
+  height: 450px;
+  padding: 20px;
+  font-size: 20px;
+  display: flex;
+  margin:auto;
+  background-color: #eee;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+li{
+  list-style: none !important;
+}
