@@ -11,7 +11,7 @@ date_default_timezone_set("Asia/Taipei");
 session_start();
 
 
-
+$awardStr=['頭','二','三','四','五','六'];
 
 // 驗證函式
 function accept($field,$meg='此欄位不得為空'){

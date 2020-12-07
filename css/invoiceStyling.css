@@ -103,7 +103,7 @@ a{
   margin: auto;
 }
 .invlisttr>th{
-  padding:5px 35px;
+  padding:5px 33px;
 }
 .invlist>tbody {
   height: 400px;
@@ -755,6 +755,16 @@ a{
   flex-flow: column wrap;
   align-content: flex-start;
   border-radius: 5px;
+  box-shadow:inset -3px -3px 7px #ffffff73,
+            inset 3px 3px 5px rgba(94,104,121,0.288);
+}
+
+.line4{
+  margin:10px auto;
+  width: 600px;
+  height: 5px;
+  background: #fff;
+  border-radius: 10%;
   box-shadow:inset -3px -3px 7px #ffffff73,
             inset 3px 3px 5px rgba(94,104,121,0.288);
 }

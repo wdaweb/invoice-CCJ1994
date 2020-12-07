@@ -16,7 +16,7 @@ $period_str=[
 
 echo "<div class='allawdTitle'>本期為".$_GET['year']."年";
 echo $period_str[$_GET['period']]."的發票</div>";
-echo "<div class='line3'></div>";
+echo "<div class='line4'></div>";
 
 // 撈出該期的所有發票
 
@@ -33,7 +33,6 @@ echo "<div>發票記錄張數：".count($invoices)."張</div>";
 
 $sql="select * from award_numbers where year='{$_GET['year']}' && period='{$_GET['period']}'";
 $award_numbers=$pdo->query($sql)->fetchALL(PDO::FETCH_ASSOC);
-
 
 
 $num=[];
@@ -96,18 +95,19 @@ foreach($award_numbers as $award){
         case 3:
             $res=-1;
             for($i=5;$i>=0;$i--){
-            $target=mb_substr($award['number'],$i,(8-$i),'utf8');
-            $mynumber=mb_substr($number,$i,(8-$i),'utf8');
-            if($target==$mynumber){
+                $target=mb_substr($award['number'],$i,(8-$i),'utf8');
+                $mynumber=mb_substr($number,$i,(8-$i),'utf8');
 
-                $res=$i;
-            }else{
-            break;
+                if($target==$mynumber){
+                    
+                    $res=$i;
+                }else{
+                    break;
             }
                 }
                 
                 if($res!=-1){
-                    $awardStr=['頭','二','三','四','五','六'];
+                    
                     $bonus3=[200000,40000,10000,4000,1000,200];
 
                     echo "<div>號碼：".$number;
@@ -136,32 +136,7 @@ foreach($award_numbers as $award){
     }
     }
 
-    if(!empty($award_numbers)){
-        if($all_res==-1){
-            echo "<div>很可惜都沒中<div>";
-        }
-        }else{
-          echo "<div>尚未開獎</div>";
-        }
-    
-    
-    echo "</div>";
-
-    
-
-//     print_r($num);
-//     echo count($num1)."<br>";
-// foreach($num1 as $n){
-//     echo $n;
-// }
-// echo "<br>";
-// foreach($num2 as $n){
-//     echo $n;
-// }
-// echo "<br>";
-// foreach($num3 as $n){
-//     echo $n."<br>";
-// }
+  
     
     // echo count($num2)."<br>";
     // echo count($num3)."<br>";
