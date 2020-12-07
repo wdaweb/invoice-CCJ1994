@@ -13,7 +13,7 @@ $inv=$pdo->query($sql)->fetch();
 <input type="hidden" name="id" value="<?=$inv['id'];?>">
     <div>發票號碼
         <input class="codeipt" type="text" name="code" value="<?=$inv['code'];?>">
-        <input class="numipt"type="number" name="number" value='<?=$inv['number'];?>'></div>
+        <input class="numipt"type="number" name="number" value="<?=$inv['number'];?>"></div>
     <div>消費金額<input class="payipt" type="text" name='payment' value="<?=$inv['payment'];?>"></div>
     <div>消費日期<input class="datipt" type="date" name='date' value="<?=$inv['date'];?>"></div>
     <div>購買品項<input class="itemipt" type="text" name='item' value="<?=$inv['item'];?>"></div>

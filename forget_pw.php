@@ -37,7 +37,7 @@ if(isset($_POST['email'])){
           <div ><label for="fpw">查 詢 密 碼</label></div>
           <div class="fline"></div>
         <div class="findipt">
-          <input class="spw" id="fpw" type="text" name="email" placeholder="請輸入信箱" require>
+          <input class="spw" id="fpw" type="text" name="email" placeholder="請輸入信箱" required>
         <input class="findbtn" type="submit" value="">
       </div>
         <div class="hint">
